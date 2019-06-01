@@ -7,7 +7,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0"
+    "react-scripts": "3.0.0",
+    "styled-components": "^4.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -44,7 +45,8 @@
     "eslint-plugin-react": "^7.13.0",
     "husky": "^2.2.0",
     "lint-staged": "^8.1.6",
-    "prettier": "^1.17.0"
+    "prettier": "^1.17.0",
+    "uuid": "^3.3.2"
   },
-  "homepage": "https://artval1988.github.io/goit-react-hw-01"
+  "homepage": "https://artval1988.github.io/goit-react-hw-02"
 }

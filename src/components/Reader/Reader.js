@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Publication from './Publication/Publication';
 import Counter from './Counter/Counter';
 import Controls from './Controls/Controls';
-
 import styles from './Reader.module.css';
 
 export default class Reader extends Component {
@@ -17,28 +16,31 @@ export default class Reader extends Component {
 
   handleNext = () => {
     this.setState(prevState => ({
-      index:
-        prevState.index === this.props.items.length - 1
-          ? prevState.index
-          : prevState.index + 1,
+      index: prevState.index + 1,
     }));
   };
 
   handlePrev = () => {
     this.setState(prevState => ({
-      index: prevState.index === 0 ? prevState.index : prevState.index - 1,
+      index: prevState.index - 1,
     }));
   };
 
   render() {
     const { index } = this.state;
     const { items } = this.props;
+    const length = items.length - 1;
 
     return (
       <div className={styles.reader}>
         <Publication item={items[index]} />
-        <Counter currentIndex={index} pubCount={items.length} />
-        <Controls onNext={this.handleNext} onPrev={this.handlePrev} />
+        <Counter currentIndex={index} pubCount={length} />
+        <Controls
+          onNext={this.handleNext}
+          onPrev={this.handlePrev}
+          currentIndex={index}
+          pubCount={length}
+        />
       </div>
     );
   }

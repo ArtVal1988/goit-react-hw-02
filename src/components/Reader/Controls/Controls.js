@@ -1,29 +1,33 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Controls.module.css';
 
-export default class Controls extends Component {
-  static defaultProps = {};
+const Controls = ({ onNext, onPrev, currentIndex, pubCount }) => (
+  <section className={styles.controls}>
+    <button
+      type="button"
+      onClick={onPrev}
+      className={styles.button}
+      disabled={currentIndex === 0}
+    >
+      Назад
+    </button>
+    <button
+      type="button"
+      onClick={onNext}
+      className={styles.button}
+      disabled={currentIndex === pubCount}
+    >
+      Вперед
+    </button>
+  </section>
+);
 
-  static propTypes = {
-    onNext: PropTypes.func.isRequired,
-    onPrev: PropTypes.func.isRequired,
-  };
+Controls.propTypes = {
+  onNext: PropTypes.func.isRequired,
+  onPrev: PropTypes.func.isRequired,
+  currentIndex: PropTypes.number.isRequired,
+  pubCount: PropTypes.number.isRequired,
+};
 
-  state = {};
-
-  render() {
-    const { onNext, onPrev } = this.props;
-
-    return (
-      <section className={styles.controls}>
-        <button type="button" className={styles.button} onClick={onPrev}>
-          Назад
-        </button>
-        <button type="button" className={styles.button} onClick={onNext}>
-          Вперед
-        </button>
-      </section>
-    );
-  }
-}
+export default Controls;

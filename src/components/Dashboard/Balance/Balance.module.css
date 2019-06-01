@@ -1,0 +1,9 @@
+.balance {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+}
+.balance span {
+  padding-right: 30px;
+  padding-left: 30px;
+}

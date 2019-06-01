@@ -1,0 +1,9 @@
+.controls {
+  display: flex;
+  justify-content: center;
+}
+.controls input {
+  margin-right: 16px;
+  font-size: 1.3em;
+  padding: 4px;
+}

@@ -1,0 +1,20 @@
+.history {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  font-size: 1.2em;
+}
+.history th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #bdbdbd;
+}
+
+.history td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 0.9em;
+}
+.history tbody tr:nth-child(even) {
+  background-color: #edffe9;
+}

@@ -4,7 +4,7 @@ import styles from './Counter.module.css';
 
 const Counter = ({ currentIndex, pubCount }) => (
   <p className={styles.counter}>
-    {currentIndex + 1}/{pubCount}
+    {currentIndex + 1}/{pubCount + 1}
   </p>
 );
 

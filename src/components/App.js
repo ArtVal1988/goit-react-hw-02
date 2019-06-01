@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Reader from './Reader/Reader';
+import MoviePage from './MoviePage/MoviePage';
 import publications from './publications.json';
+import Dashboard from './Dashboard/Dashboard';
 
-const App = () => <Reader items={publications} />;
+export default class App extends Component {
+  state = {};
 
-export default App;
+  render() {
+    return (
+      <>
+        <Reader items={publications} />
+        <MoviePage />
+        <Dashboard />
+      </>
+    );
+  }
+}

@@ -25,7 +25,7 @@
   cursor: pointer;
 }
 
-.button[disabled] {
+button[disabled] {
   pointer-events: none;
   background-color: #bdbdbd;
 }
